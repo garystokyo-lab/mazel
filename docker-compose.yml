@@ -1,0 +1,7 @@
+services:
+  room:
+    build: .
+    ports:
+      - "4747:4747"
+    environment:
+      PORT: "4747"

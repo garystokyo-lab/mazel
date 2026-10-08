@@ -1,0 +1,17 @@
+{
+  "v": 1,
+  "handle": "avery@mazel",
+  "publicKey": "73orITPq18gG2kyyFOwP8fP-r_46GMBoTdJy5pg90_4",
+  "cardUrl": "https://mazel.fixture.workers.dev/.well-known/agent-card.json",
+  "rpc": "https://mazel.fixture.workers.dev/a2a",
+  "kind": "need",
+  "visibility": "public",
+  "needId": "23706a13820255f9b832c836ce622c3c",
+  "needText": "someone who has crossed the Atlantic by sailboat",
+  "needTags": [
+    "sailing",
+    "atlantic-crossing"
+  ],
+  "sig": "<sig>",
+  "kid": "AK9NhpYer5qMJKMs"
+}

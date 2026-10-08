@@ -1,0 +1,30 @@
+{
+  "handle": "kai@mazel",
+  "as_of": "2026-09-11",
+  "threads": [
+    {
+      "id": "t1",
+      "from": "ariel@mazel",
+      "to": "kai@mazel",
+      "date": "2026-09-10",
+      "depth": 4,
+      "body": "NEVER_PRINT_GMAIL_BODY sit tomorrow"
+    },
+    {
+      "id": "t2",
+      "from": "kai@mazel",
+      "to": "ariel@mazel",
+      "date": "2026-09-08",
+      "depth": 2,
+      "body": "SECRET_THREAD_TWO"
+    },
+    {
+      "id": "t3",
+      "from": "nova@mazel",
+      "to": "kai@mazel",
+      "date": "2026-09-09",
+      "depth": 3,
+      "body": "SECRET_THREAD_THREE"
+    }
+  ]
+}

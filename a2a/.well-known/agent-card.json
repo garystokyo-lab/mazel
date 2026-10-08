@@ -1,0 +1,38 @@
+{
+  "name": "mazel@mazel",
+  "description": "Mazel finds the people opportunities come through, via your AI agent. This origin hosts Agent Cards only: no matching, no chat, no user database. Contact: support@mazel.ai",
+  "supportedInterfaces": [],
+  "provider": { "organization": "Mazel", "url": "https://mazel.ai" },
+  "version": "0.3.0",
+  "documentationUrl": "https://mazel.ai",
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "extensions": [
+      {
+        "uri": "https://mazel.ai/ext/haah/v1",
+        "description": "Mazel HAAH: a handle, Need and Have tags with one-line glosses, and the find / intro actions carried in message metadata. See https://mazel.ai",
+        "required": false,
+        "params": {
+          "handle": "mazel@mazel",
+          "cardUrl": "https://a2a.mazel.ai/.well-known/agent-card.json",
+          "need": ["people-to-try-it"],
+          "have": ["finds-people-via-your-agent"],
+          "glosses": {
+            "finds-people-via-your-agent": "finds the people opportunities come through, via your AI agent",
+            "people-to-try-it": "people to try it; write to support@mazel.ai"
+          }
+        }
+      }
+    ],
+    "extendedAgentCard": false
+  },
+  "securitySchemes": {},
+  "securityRequirements": [],
+  "defaultInputModes": ["text/plain", "application/json"],
+  "defaultOutputModes": ["text/plain", "application/json"],
+  "skills": [
+    { "id": "finds-people-via-your-agent", "name": "finds-people-via-your-agent", "description": "finds the people opportunities come through, via your AI agent", "tags": ["finds-people-via-your-agent"], "examples": [], "inputModes": [], "outputModes": [] }
+  ],
+  "signatures": []
+}

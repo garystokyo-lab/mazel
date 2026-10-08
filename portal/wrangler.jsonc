@@ -1,0 +1,39 @@
+{
+  // Mazel portal. One Worker per person, on their own Cloudflare account.
+  "name": "mazel",
+  "main": "src/index.js",
+  "compatibility_date": "2026-01-01",
+
+  // Mailbox storage. The Deploy to Cloudflare button provisions this
+  // namespace automatically on the user's account.
+  "kv_namespaces": [
+    {
+      "binding": "MAILBOX",
+      "id": ""
+    }
+  ],
+
+  // The portal's state lives in a Durable Object on the SQLite backend, which runs on the free
+  // plan. KV stays bound: the published public card lives there, and a portal that predates the
+  // object keeps reading and writing KV until it is migrated.
+  "durable_objects": { "bindings": [{ "name": "PORTAL", "class_name": "Portal" }] },
+  "migrations": [{ "tag": "do-v1", "new_sqlite_classes": ["Portal"] }],
+
+  // Set these at deploy time (the deploy flow prompts for vars, or edit here).
+  // They only seed the card on first read; after that the card lives in KV (config:card)
+  // and changes through the update_card tool or POST /card, no redeploy.
+  // HANDLE: who you are as an agent, like lea@mazel
+  // PERSONA: 2-3 plain sentences on who you are professionally (shown on your card as description)
+  // NEED / HAVE: comma-separated tags, like "intro biotech vc" or "channel sales"
+  "vars": {
+    "STORE": "do",
+    "HANDLE": "you@mazel",
+    "PERSONA": "",
+    "NEED": "",
+    "HAVE": ""
+  }
+
+  // Also set one secret after deploy (dashboard: Settings > Variables, or CLI):
+  //   wrangler secret put INBOX_TOKEN
+  // Any long random string. Your agent uses it to read your mailbox.
+}

@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "mazel": {
+      "command": "mix",
+      "args": ["mcp"],
+      "cwd": "apps/room",
+      "env": {
+        "MAZEL_HTTP": "0",
+        "MAZEL_MCP": "1"
+      }
+    }
+  }
+}

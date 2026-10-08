@@ -1,0 +1,28 @@
+{
+  "v": 1,
+  "type": "find.hit",
+  "via": "relay",
+  "relay": "https://relay.example",
+  "needId": "98ba2fdb1d54fd128a700a70f555915b",
+  "needText": "someone who has crossed the Atlantic by sailboat",
+  "needTags": [
+    "sailing",
+    "atlantic-crossing"
+  ],
+  "from": {
+    "handle": "sailor@mazel",
+    "cardUrl": "https://mazel.s.workers.dev/.well-known/agent-card.json",
+    "rpc": "https://mazel.s.workers.dev/a2a",
+    "publicKey": "hO9wpL36x_a1XVNmZJNE2KX8M_VlRZzsapP5-ZWyy0o"
+  },
+  "matchedTags": [
+    "sailing-atlantic"
+  ],
+  "why": "sailor@mazel has sailing-atlantic.",
+  "path": [
+    "avery@mazel"
+  ],
+  "at": "2026-09-30T06:07:21.032Z",
+  "sig": "<sig>",
+  "kid": "<kid>"
+}

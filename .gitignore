@@ -1,0 +1,24 @@
+/target
+**/*.rs.bk
+apps/room/_build
+apps/room/deps
+apps/room/erl_crash.dump
+apps/room/*.ez
+apps/room/priv/static/cache
+.elixir_ls
+.DS_Store
+.env
+.env.keys
+.env.local
+!.env.example
+index/needs/*-need-series-a-*.md
+index/needs/*-need-*-*.md
+index/opens/*
+!index/opens/2026-09-10-open-enterprise-ai.md
+index/curious/*
+!index/curious/.gitkeep
+/dist
+node_modules/
+
+# secrets kept in ~/mazel-work, never here
+*token*.txt

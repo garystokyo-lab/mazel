@@ -1,0 +1,14 @@
+{
+  "name": "Ariel",
+  "handle": "ariel@mazel",
+  "url": "https://mazel.ai/cards/ariel",
+  "protocol": "haah",
+  "product": "mazel",
+  "description": "Ariel's agent. Talk through me. Connect is the human moment.",
+  "skills": [
+    "find",
+    "chat",
+    "direct"
+  ],
+  "dotenvx": "MAZEL_CARD_ARIEL"
+}

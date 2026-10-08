@@ -1,0 +1,11 @@
+%PDF-1.4
+% mazel resume fixture — string extract only, no OCR
+1 0 obj<< /Type /Catalog /Pages 2 0 R >>endobj
+2 0 obj<< /Type /Pages /Count 1 /Kids [3 0 R] >>endobj
+3 0 obj<< /Type /Page /Parent 2 0 R /MediaBox [0 0 400 200] /Contents 4 0 R >>endobj
+4 0 obj<< /Length 128 >>stream
+BT /F1 12 Tf 40 160 Td (Kai) Tj 0 -18 Td (proof: series-a, cto) Tj 0 -18 Td (claim: I am a passionate visionary thought leader.) Tj ET
+endstream
+endobj
+trailer<< /Root 1 0 R >>
+%%EOF

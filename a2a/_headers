@@ -1,0 +1,8 @@
+/*
+  Access-Control-Allow-Origin: *
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Content-Type-Options: nosniff
+  Cache-Control: public, max-age=300
+
+/
+  Cache-Control: public, max-age=0, must-revalidate

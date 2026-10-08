@@ -1,0 +1,14 @@
+; Mazel handle zone fixture. No live DNS.
+; Same TXT you add at the registrar later (host = handle local).
+;
+; When ready, add these records at iwantmyname (host = handle local):
+;   kai     TXT   mazel-card=https://mazel.ai/cards/kai mazel-haah=1
+;   avery   TXT   mazel-card=https://mazel.ai/cards/avery mazel-haah=1
+;   nova    TXT   mazel-card=https://mazel.ai/cards/nova mazel-haah=1
+;
+$ORIGIN mazel.ai.
+$TTL 300
+
+kai     300  IN  TXT  "mazel-card=https://mazel.ai/cards/kai mazel-haah=1"
+avery   300  IN  TXT  "mazel-card=https://mazel.ai/cards/avery mazel-haah=1"
+nova    300  IN  TXT  "mazel-card=https://mazel.ai/cards/nova mazel-haah=1"

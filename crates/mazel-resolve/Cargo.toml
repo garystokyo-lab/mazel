@@ -1,0 +1,17 @@
+[package]
+name = "mazel-resolve"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "DNS-shaped Mazel handle resolution stub (static map + zone TXT)"
+
+[[bin]]
+name = "resolve_demo"
+path = "src/bin/resolve_demo.rs"
+
+[[bin]]
+name = "dns_demo"
+path = "src/bin/dns_demo.rs"
+
+[dependencies]
+mazel-core = { path = "../mazel-core" }

@@ -1,0 +1,51 @@
+<!-- Mazel install page: adds a Copy button to the terminal box.
+     Paste into Squarespace at: Pages > install > (gear) Settings > Advanced > Page Header Code Injection.
+     Nothing in the page depends on this; without it the command is still selectable text. -->
+<script>
+(function () {
+  function attach() {
+    var box = document.querySelector('#mazel-install .term');
+    if (!box || box.querySelector('.term-copy')) return;
+    var code = box.querySelector('code');
+    if (!code) return;
+    var text = code.textContent.replace(/^\s*\$\s*/, '').trim();
+
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'term-copy';
+    btn.textContent = 'Copy';
+    btn.style.cssText = 'flex:none;margin-left:.75rem;border:1px solid #2f3336;background:transparent;' +
+      'color:#cfcbc3;border-radius:6px;padding:.3rem .6rem;font:inherit;font-size:13px;cursor:pointer';
+    btn.onmouseenter = function () { btn.style.borderColor = '#5a6167'; btn.style.color = '#fff'; };
+    btn.onmouseleave = function () { btn.style.borderColor = '#2f3336'; btn.style.color = '#cfcbc3'; };
+
+    btn.addEventListener('click', function () {
+      var said = function () {
+        btn.textContent = 'Copied';
+        setTimeout(function () { btn.textContent = 'Copy'; }, 1600);
+      };
+      // Older browsers, and any page not served over https, need the textarea route.
+      var manual = function () {
+        var ta = document.createElement('textarea');
+        ta.value = text;
+        ta.setAttribute('readonly', '');
+        ta.style.cssText = 'position:absolute;left:-9999px';
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand('copy'); } catch (e) {}
+        document.body.removeChild(ta);
+        said();
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(said, manual);
+      } else {
+        manual();
+      }
+    });
+
+    box.appendChild(btn);
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', attach);
+  else attach();
+})();
+</script>

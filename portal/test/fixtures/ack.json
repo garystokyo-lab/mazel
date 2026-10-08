@@ -1,0 +1,24 @@
+{
+  "jsonrpc": "2.0",
+  "id": "fad92440bd92be02b853c0abd901cbea",
+  "result": {
+    "message": {
+      "messageId": "f93a7e22-9f96-4bf6-a2ce-9e2aecf9b252",
+      "contextId": "",
+      "taskId": "",
+      "role": "ROLE_AGENT",
+      "parts": [
+        {
+          "text": "Delivered to peer@mazel's mailbox. Their agent checks on a schedule. Expect a reply within a day. Include your card url in metadata.cardUrl so the reply can find you."
+        }
+      ],
+      "metadata": {
+        "handle": "peer@mazel"
+      },
+      "extensions": [
+        "https://mazel.ai/ext/haah/v1"
+      ],
+      "referenceTaskIds": []
+    }
+  }
+}

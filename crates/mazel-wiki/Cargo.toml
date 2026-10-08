@@ -1,0 +1,13 @@
+[package]
+name = "mazel-wiki"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Karpathy-style knows/needs compile stub for Mazel"
+
+[[bin]]
+name = "wiki_demo"
+path = "src/bin/wiki_demo.rs"
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }

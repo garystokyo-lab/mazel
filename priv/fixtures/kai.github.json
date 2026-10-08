@@ -1,0 +1,17 @@
+{
+  "url": "https://github.com/kai",
+  "login": "kai",
+  "proof": ["series-a", "cto"],
+  "repos": [
+    {"name": "series-a-memo", "description": "Series-A operator notes"},
+    {"name": "cto-handbook", "description": "Former CTO handbook"}
+  ],
+  "commits": [
+    {"sha": "a11ce0", "message": "memo: series-a close notes"},
+    {"sha": "c70c10", "message": "handbook: cto onboarding"}
+  ],
+  "pulls": [
+    {"title": "Merge series-a memo", "merged": true},
+    {"title": "CTO handbook v1", "merged": true}
+  ]
+}

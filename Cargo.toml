@@ -1,0 +1,3 @@
+[workspace]
+members = ["crates/mazel-core", "crates/mazel-wiki", "crates/mazel-resolve"]
+resolver = "2"
